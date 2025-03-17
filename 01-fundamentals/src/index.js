@@ -10,7 +10,7 @@ function BookList() {
   return (
     <>
       <h1>amazon best sellers</h1>
-      <section className='booklist'>
+      <section className="booklist">
         {books.map((book) => {
           return <Book {...book} key={book.id} />;
         })}
