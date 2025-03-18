@@ -126,7 +126,7 @@ export default App;
   - Hero.js
   - About.js
   - Services.js
-  - Tours.j
+  - Tours.js
   - Footer.js
 - setup components with default export (snippet - rafce)
 - carefully move the code from App.js into components (files)
