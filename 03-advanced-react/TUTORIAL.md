@@ -21,7 +21,7 @@ import Starter from './tutorial/1-useState/starter/1-error-example';
 import Final from './tutorial/1-useState/final/1-error-example';
 function App() {
   return (
-    <div className='container'>
+    <div className="container">
       <Starter />
       <Final />
     </div>
@@ -59,7 +59,7 @@ const ErrorExample = () => {
   return (
     <div>
       <h2>{count}</h2>
-      <button type='button' className='btn' onClick={handleClick}>
+      <button type="button" className="btn" onClick={handleClick}>
         increment
       </button>
     </div>
@@ -102,7 +102,7 @@ const UseStateBasics = () => {
   return (
     <div>
       <h4>You clicked {count} times</h4>
-      <button className='btn' onClick={handleClick}>
+      <button className="btn" onClick={handleClick}>
         Click me
       </button>
     </div>
@@ -163,7 +163,7 @@ const UseStateArray = () => {
       {people.map((person) => {
         const { id, name } = person;
         return (
-          <div key={id} className='item'>
+          <div key={id} className="item">
             <h4>{name}</h4>
           </div>
         );
@@ -194,17 +194,13 @@ const UseStateArray = () => {
       {people.map((person) => {
         const { id, name } = person;
         return (
-          <div key={id} className='item'>
+          <div key={id} className="item">
             <h4>{name}</h4>
             <button onClick={() => removeItem(id)}>remove</button>
           </div>
         );
       })}
-      <button
-        className='btn'
-        style={{ marginTop: '2rem' }}
-        onClick={() => setPeople([])}
-      >
+      <button className="btn" style={{ marginTop: '2rem' }} onClick={() => setPeople([])}>
         clear items
       </button>
     </div>
@@ -253,7 +249,7 @@ const UseStateObject = () => {
       <h3>{name}</h3>
       <h3>{age}</h3>
       <h4>Enjoys To: {hobby}</h4>
-      <button className='btn' onClick={displayPerson}>
+      <button className="btn" onClick={displayPerson}>
         show john
       </button>
     </>
@@ -295,7 +291,7 @@ const UseStateObject = () => {
       <h3>{person.name}</h3>
       <h3>{person.age}</h3>
       <h4>Enjoys To: {person.hobby}</h4>
-      <button className='btn' onClick={displayPerson}>
+      <button className="btn" onClick={displayPerson}>
         show john
       </button>
     </>
@@ -338,7 +334,7 @@ const UseStateGotcha = () => {
   return (
     <div>
       <h1>{value}</h1>
-      <button className='btn' onClick={handleClick}>
+      <button className="btn" onClick={handleClick}>
         increase
       </button>
     </div>
@@ -410,7 +406,7 @@ const ComponentExample = () => {
   return (
     <div>
       <h1>value : {value}</h1>
-      <button className='btn' onClick={() => setValue(value + 1)}>
+      <button className="btn" onClick={() => setValue(value + 1)}>
         click me
       </button>
     </div>
@@ -482,7 +478,7 @@ const UseEffectBasics = () => {
   return (
     <div>
       <h1>value : {value}</h1>
-      <button className='btn' onClick={() => setValue(value + 1)}>
+      <button className="btn" onClick={() => setValue(value + 1)}>
         click me
       </button>
     </div>
@@ -514,11 +510,11 @@ const MultipleEffects = () => {
   return (
     <div>
       <h1>value : {value}</h1>
-      <button className='btn' onClick={() => setValue(value + 1)}>
+      <button className="btn" onClick={() => setValue(value + 1)}>
         value
       </button>
       <h1>second value : {secondValue}</h1>
-      <button className='btn' onClick={() => setSecondValue(secondValue + 1)}>
+      <button className="btn" onClick={() => setSecondValue(secondValue + 1)}>
         second value
       </button>
     </div>
@@ -575,7 +571,7 @@ const FetchData = () => {
   return (
     <section>
       <h3>github users</h3>
-      <ul className='users'>
+      <ul className="users">
         {users.map((user) => {
           const { id, login, avatar_url, html_url } = user;
           return (
@@ -617,7 +613,7 @@ const CleanupFunction = () => {
   const [toggle, setToggle] = useState(false);
   return (
     <div>
-      <button className='btn' onClick={() => setToggle(!toggle)}>
+      <button className="btn" onClick={() => setToggle(!toggle)}>
         toggle component
       </button>
       {toggle && <RandomComponent />}
@@ -657,7 +653,7 @@ const CleanupFunction = () => {
   const [toggle, setToggle] = useState(false);
   return (
     <div>
-      <button className='btn' onClick={() => setToggle(!toggle)}>
+      <button className="btn" onClick={() => setToggle(!toggle)}>
         toggle component
       </button>
       {toggle && <RandomComponent />}
@@ -850,11 +846,7 @@ const MultipleReturnsFetchData = () => {
   }
   return (
     <div>
-      <img
-        style={{ width: '150px', borderRadius: '25px' }}
-        src={user.avatar_url}
-        alt={user.name}
-      />
+      <img style={{ width: '150px', borderRadius: '25px' }} src={user.avatar_url} alt={user.name} />
       <h2>{user.name}</h2>
       <h4>works at {user.company}</h4>
       <p>{user.bio}</p>
@@ -905,11 +897,7 @@ Challenge :
 ```js
 return (
   <div>
-    <img
-      style={{ width: '100px', borderRadius: '25px' }}
-      src={avatar_url}
-      alt={name}
-    />
+    <img style={{ width: '100px', borderRadius: '25px' }} src={avatar_url} alt={name} />
     <h2>{name}</h2>
     <h4>works at {company}</h4>
     <p>{bio}</p>
@@ -938,11 +926,7 @@ const { avatar_url, name, company, bio } = user;
 ```js
 return (
   <div>
-    <img
-      style={{ width: '100px', borderRadius: '25px' }}
-      src={avatar_url}
-      alt={name}
-    />
+    <img style={{ width: '100px', borderRadius: '25px' }} src={avatar_url} alt={name} />
     <h2>{name}</h2>
     <h4>works at {company}</h4>
     <p>{bio}</p>
@@ -1217,7 +1201,7 @@ const ShortCircuitOverview = () => {
       )}
       {user && <SomeComponent name={user.name} />}
       <h2 style={{ margin: '1rem 0' }}>Ternary Operator</h2>
-      <button className='btn'>{isEditing ? 'edit' : 'add'}</button>
+      <button className="btn">{isEditing ? 'edit' : 'add'}</button>
       {user ? (
         <div>
           <h4>hello there user {user.name}</h4>
@@ -1235,7 +1219,7 @@ const SomeComponent = ({ name }) => {
   return (
     <div>
       <h4>hello there, {name}</h4>
-      <button className='btn'>log out</button>
+      <button className="btn">log out</button>
     </div>
   );
 };
@@ -1290,7 +1274,7 @@ const ToggleChallenge = () => {
 
   return (
     <div>
-      <button className='btn' onClick={toggleAlert}>
+      <button className="btn" onClick={toggleAlert}>
         toggle alert
       </button>
       {showAlert && <Alert />}
@@ -1299,7 +1283,7 @@ const ToggleChallenge = () => {
 };
 
 const Alert = () => {
-  return <div className='alert alert-danger'>hello world</div>;
+  return <div className="alert alert-danger">hello world</div>;
 };
 export default ToggleChallenge;
 ```
@@ -1345,14 +1329,14 @@ const UserChallenge = () => {
       {user ? (
         <div>
           <h4>hello there, {user.name}</h4>
-          <button className='btn' onClick={logout}>
+          <button className="btn" onClick={logout}>
             logout
           </button>
         </div>
       ) : (
         <div>
           <h4>Please Login</h4>
-          <button className='btn' onClick={login}>
+          <button className="btn" onClick={login}>
             login
           </button>
         </div>
@@ -1570,21 +1554,21 @@ Setup (for all form videos)
 ```js
 const ControlledInputs = () => {
   return (
-    <form className='form'>
+    <form className="form">
       <h4>controlled inputs</h4>
-      <div className='form-row'>
-        <label htmlFor='name' className='form-label'>
+      <div className="form-row">
+        <label htmlFor="name" className="form-label">
           name
         </label>
-        <input type='text' className='form-input' id='name' />
+        <input type="text" className="form-input" id="name" />
       </div>
-      <div className='form-row'>
-        <label htmlFor='email' className='form-label'>
+      <div className="form-row">
+        <label htmlFor="email" className="form-label">
           Email
         </label>
-        <input type='email' className='form-input' id='email' />
+        <input type="email" className="form-input" id="email" />
       </div>
-      <button type='submit' className='btn btn-block'>
+      <button type="submit" className="btn btn-block">
         submit
       </button>
     </form>
@@ -1621,33 +1605,27 @@ const ControlledInputs = () => {
     console.log(name, email);
   };
   return (
-    <form className='form' onSubmit={handleSubmit}>
+    <form className="form" onSubmit={handleSubmit}>
       <h4>controlled inputs</h4>
-      <div className='form-row'>
-        <label htmlFor='name' className='form-label'>
+      <div className="form-row">
+        <label htmlFor="name" className="form-label">
           name
         </label>
-        <input
-          type='text'
-          className='form-input'
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          id='name'
-        />
+        <input type="text" className="form-input" value={name} onChange={(e) => setName(e.target.value)} id="name" />
       </div>
-      <div className='form-row'>
-        <label htmlFor='email' className='form-label'>
+      <div className="form-row">
+        <label htmlFor="email" className="form-label">
           Email
         </label>
         <input
-          type='email'
-          className='form-input'
-          id='email'
+          type="email"
+          className="form-input"
+          id="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
       </div>
-      <button type='submit' className='btn btn-block'>
+      <button type="submit" className="btn btn-block">
         submit
       </button>
     </form>
@@ -1702,22 +1680,16 @@ const UserChallenge = () => {
   };
   return (
     <div>
-      <form className='form' onSubmit={handleSubmit}>
+      <form className="form" onSubmit={handleSubmit}>
         <h4>Add User</h4>
-        <div className='form-row'>
-          <label htmlFor='name' className='form-label'>
+        <div className="form-row">
+          <label htmlFor="name" className="form-label">
             name
           </label>
-          <input
-            type='text'
-            className='form-input'
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            id='name'
-          />
+          <input type="text" className="form-input" value={name} onChange={(e) => setName(e.target.value)} id="name" />
         </div>
 
-        <button type='submit' className='btn btn-block'>
+        <button type="submit" className="btn btn-block">
           submit
         </button>
       </form>
@@ -1728,7 +1700,7 @@ const UserChallenge = () => {
         return (
           <div key={user.id}>
             <h4>{user.name}</h4>
-            <button onClick={() => removeUser(user.id)} className='btn'>
+            <button onClick={() => removeUser(user.id)} className="btn">
               remove
             </button>
           </div>
@@ -1769,52 +1741,45 @@ const MultipleInputs = () => {
   };
   return (
     <div>
-      <form className='form' onSubmit={handleSubmit}>
+      <form className="form" onSubmit={handleSubmit}>
         <h4>Multiple Inputs</h4>
         {/* name */}
-        <div className='form-row'>
-          <label htmlFor='name' className='form-label'>
+        <div className="form-row">
+          <label htmlFor="name" className="form-label">
             name
           </label>
-          <input
-            type='text'
-            className='form-input'
-            id='name'
-            name='name'
-            value={user.name}
-            onChange={handleChange}
-          />
+          <input type="text" className="form-input" id="name" name="name" value={user.name} onChange={handleChange} />
         </div>
         {/* email */}
-        <div className='form-row'>
-          <label htmlFor='email' className='form-label'>
+        <div className="form-row">
+          <label htmlFor="email" className="form-label">
             Email
           </label>
           <input
-            type='email'
-            className='form-input'
-            id='email'
-            name='email'
+            type="email"
+            className="form-input"
+            id="email"
+            name="email"
             value={user.email}
             onChange={handleChange}
           />
         </div>
         {/* password */}
-        <div className='form-row'>
-          <label htmlFor='password' className='form-label'>
+        <div className="form-row">
+          <label htmlFor="password" className="form-label">
             Password
           </label>
           <input
-            type='password'
-            className='form-input'
-            id='password'
-            name='password'
+            type="password"
+            className="form-input"
+            id="password"
+            name="password"
             value={user.password}
             onChange={handleChange}
           />
         </div>
 
-        <button type='submit' className='btn btn-block'>
+        <button type="submit" className="btn btn-block">
           submit
         </button>
       </form>
@@ -1846,35 +1811,24 @@ const OtherInputs = () => {
   };
   return (
     <div>
-      <form className='form'>
+      <form className="form">
         <h4>Other Inputs</h4>
         {/* name */}
-        <div className='form-row' style={{ textAlign: 'left' }}>
-          <input
-            type='checkbox'
-            checked={shipping}
-            id='shipping'
-            name='shipping'
-            onChange={handleShipping}
-          />
-          <label htmlFor='shipping'> Free Shipping </label>
+        <div className="form-row" style={{ textAlign: 'left' }}>
+          <input type="checkbox" checked={shipping} id="shipping" name="shipping" onChange={handleShipping} />
+          <label htmlFor="shipping"> Free Shipping </label>
         </div>
-        <div className='form-row' style={{ textAlign: 'left' }}>
-          <label htmlFor='framework' className='form-label'>
+        <div className="form-row" style={{ textAlign: 'left' }}>
+          <label htmlFor="framework" className="form-label">
             Framework
           </label>
-          <select
-            name='framework'
-            id='framework'
-            value={framework}
-            onChange={handleFramework}
-          >
+          <select name="framework" id="framework" value={framework} onChange={handleFramework}>
             {frameworks.map((framework) => {
               return <option key={framework}>{framework}</option>;
             })}
           </select>
         </div>
-        <button type='submit' className='btn btn-block'>
+        <button type="submit" className="btn btn-block">
           submit
         </button>
       </form>
@@ -1920,36 +1874,31 @@ const UncontrolledInputs = () => {
   };
   return (
     <div>
-      <form className='form' onSubmit={handleSubmit}>
+      <form className="form" onSubmit={handleSubmit}>
         <h4>Form Data API</h4>
         {/* name */}
-        <div className='form-row'>
-          <label htmlFor='name' className='form-label'>
+        <div className="form-row">
+          <label htmlFor="name" className="form-label">
             name
           </label>
-          <input type='text' className='form-input' id='name' name='name' />
+          <input type="text" className="form-input" id="name" name="name" />
         </div>
         {/* email */}
-        <div className='form-row'>
-          <label htmlFor='email' className='form-label'>
+        <div className="form-row">
+          <label htmlFor="email" className="form-label">
             Email
           </label>
-          <input type='email' className='form-input' id='email' name='email' />
+          <input type="email" className="form-input" id="email" name="email" />
         </div>
         {/* password */}
-        <div className='form-row'>
-          <label htmlFor='password' className='form-label'>
+        <div className="form-row">
+          <label htmlFor="password" className="form-label">
             Password
           </label>
-          <input
-            type='password'
-            className='form-input'
-            id='password'
-            name='password'
-          />
+          <input type="password" className="form-input" id="password" name="password" />
         </div>
 
-        <button type='submit' className='btn btn-block'>
+        <button type="submit" className="btn btn-block">
           submit
         </button>
       </form>
@@ -2028,24 +1977,19 @@ const UseRefBasics = () => {
 
   return (
     <div>
-      <form className='form' onSubmit={handleSubmit}>
-        <div className='form-row'>
-          <label htmlFor='name' className='form-label'>
+      <form className="form" onSubmit={handleSubmit}>
+        <div className="form-row">
+          <label htmlFor="name" className="form-label">
             Name
           </label>
-          <input
-            type='text'
-            id='name'
-            ref={refContainer}
-            className='form-input'
-          />
+          <input type="text" id="name" ref={refContainer} className="form-input" />
         </div>
-        <button type='submit' className='btn btn-block'>
+        <button type="submit" className="btn btn-block">
           submit
         </button>
       </form>
       <h1>value : {value}</h1>
-      <button onClick={() => setValue(value + 1)} className='btn'>
+      <button onClick={() => setValue(value + 1)} className="btn">
         increase
       </button>
     </div>
@@ -2213,7 +2157,7 @@ const Navbar = () => {
     setUser(null);
   };
   return (
-    <nav className='navbar'>
+    <nav className="navbar">
       <h5>CONTEXT API</h5>
       <NavLinks user={user} logout={logout} />
     </nav>
@@ -2229,13 +2173,13 @@ import UserContainer from './UserContainer';
 
 const NavLinks = ({ user, logout }) => {
   return (
-    <div className='nav-container'>
-      <ul className='nav-links'>
+    <div className="nav-container">
+      <ul className="nav-links">
         <li>
-          <a href='#'>home</a>
+          <a href="#">home</a>
         </li>
         <li>
-          <a href='#'>about</a>
+          <a href="#">about</a>
         </li>
       </ul>
       <UserContainer user={user} logout={logout} />
@@ -2250,11 +2194,11 @@ UserContainer.jsx
 ```js
 const UserContainer = ({ user, logout }) => {
   return (
-    <div className='user-container'>
+    <div className="user-container">
       {user ? (
         <>
           <p>Hello There, {user.name.toUpperCase()}</p>
-          <button type='button' className='btn' onClick={logout}>
+          <button type="button" className="btn" onClick={logout}>
             logout
           </button>
         </>
@@ -2316,11 +2260,11 @@ const resetList = () => {
 // JSX
 {
   people.length < 1 ? (
-    <button className='btn' style={{ marginTop: '2rem' }} onClick={resetList}>
+    <button className="btn" style={{ marginTop: '2rem' }} onClick={resetList}>
       reset
     </button>
   ) : (
-    <button className='btn' style={{ marginTop: '2rem' }} onClick={clearList}>
+    <button className="btn" style={{ marginTop: '2rem' }} onClick={clearList}>
       clear
     </button>
   );
@@ -2345,26 +2289,18 @@ const ReducerBasics = () => {
       {people.map((person) => {
         const { id, name } = person;
         return (
-          <div key={id} className='item'>
+          <div key={id} className="item">
             <h4>{name}</h4>
             <button onClick={() => removeItem(id)}>remove</button>
           </div>
         );
       })}
       {people.length < 1 ? (
-        <button
-          className='btn'
-          style={{ marginTop: '2rem' }}
-          onClick={resetList}
-        >
+        <button className="btn" style={{ marginTop: '2rem' }} onClick={resetList}>
           reset
         </button>
       ) : (
-        <button
-          className='btn'
-          style={{ marginTop: '2rem' }}
-          onClick={clearList}
-        >
+        <button className="btn" style={{ marginTop: '2rem' }} onClick={clearList}>
           clear
         </button>
       )}
@@ -2416,7 +2352,7 @@ const ReducerBasics = () => {
       {state.people.map((person) => {
         const { id, name } = person;
         return (
-          <div key={id} className='item'>
+          <div key={id} className="item">
             <h4>{name}</h4>
             <button onClick={() => removeItem(id)}>remove</button>
           </div>
@@ -2424,19 +2360,11 @@ const ReducerBasics = () => {
       })}
       {/* switch to state */}
       {state.people.length < 1 ? (
-        <button
-          className='btn'
-          style={{ marginTop: '2rem' }}
-          onClick={resetList}
-        >
+        <button className="btn" style={{ marginTop: '2rem' }} onClick={resetList}>
           reset
         </button>
       ) : (
-        <button
-          className='btn'
-          style={{ marginTop: '2rem' }}
-          onClick={clearList}
-        >
+        <button className="btn" style={{ marginTop: '2rem' }} onClick={clearList}>
           clear
         </button>
       )}
@@ -2485,26 +2413,18 @@ const ReducerBasics = () => {
       {state.people.map((person) => {
         const { id, name } = person;
         return (
-          <div key={id} className='item'>
+          <div key={id} className="item">
             <h4>{name}</h4>
             <button onClick={() => removeItem(id)}>remove</button>
           </div>
         );
       })}
       {state.people.length < 1 ? (
-        <button
-          className='btn'
-          style={{ marginTop: '2rem' }}
-          onClick={resetList}
-        >
+        <button className="btn" style={{ marginTop: '2rem' }} onClick={resetList}>
           reset
         </button>
       ) : (
-        <button
-          className='btn'
-          style={{ marginTop: '2rem' }}
-          onClick={clearList}
-        >
+        <button className="btn" style={{ marginTop: '2rem' }} onClick={clearList}>
           clear
         </button>
       )}
@@ -2554,7 +2474,7 @@ const ReducerBasics = () => {
       {state.people.map((person) => {
         const { id, name } = person;
         return (
-          <div key={id} className='item'>
+          <div key={id} className="item">
             <h4>{name}</h4>
             <button onClick={() => removeItem(id)}>remove</button>
           </div>
@@ -2563,19 +2483,11 @@ const ReducerBasics = () => {
       {/* switch to state */}
 
       {state.people.length < 1 ? (
-        <button
-          className='btn'
-          style={{ marginTop: '2rem' }}
-          onClick={resetList}
-        >
+        <button className="btn" style={{ marginTop: '2rem' }} onClick={resetList}>
           reset
         </button>
       ) : (
-        <button
-          className='btn'
-          style={{ marginTop: '2rem' }}
-          onClick={clearList}
-        >
+        <button className="btn" style={{ marginTop: '2rem' }} onClick={clearList}>
           clear
         </button>
       )}
@@ -2631,7 +2543,7 @@ const ReducerBasics = () => {
       {state.people.map((person) => {
         const { id, name } = person;
         return (
-          <div key={id} className='item'>
+          <div key={id} className="item">
             <h4>{name}</h4>
             <button onClick={() => removeItem(id)}>remove</button>
           </div>
@@ -2640,19 +2552,11 @@ const ReducerBasics = () => {
       {/* switch to state */}
 
       {state.people.length < 1 ? (
-        <button
-          className='btn'
-          style={{ marginTop: '2rem' }}
-          onClick={resetList}
-        >
+        <button className="btn" style={{ marginTop: '2rem' }} onClick={resetList}>
           reset
         </button>
       ) : (
-        <button
-          className='btn'
-          style={{ marginTop: '2rem' }}
-          onClick={clearList}
-        >
+        <button className="btn" style={{ marginTop: '2rem' }} onClick={clearList}>
           clear
         </button>
       )}
@@ -2689,9 +2593,7 @@ const reducer = (state, action) => {
     return { ...state, people: data };
   }
   if (action.type === REMOVE_ITEM) {
-    let newPeople = state.people.filter(
-      (person) => person.id !== action.payload.id
-    );
+    let newPeople = state.people.filter((person) => person.id !== action.payload.id);
 
     return { ...state, people: newPeople };
   }
@@ -2719,7 +2621,7 @@ const ReducerBasics = () => {
       {state.people.map((person) => {
         const { id, name } = person;
         return (
-          <div key={id} className='item'>
+          <div key={id} className="item">
             <h4>{name}</h4>
             <button onClick={() => removeItem(id)}>remove</button>
           </div>
@@ -2728,19 +2630,11 @@ const ReducerBasics = () => {
       {/* switch to state */}
 
       {state.people.length < 1 ? (
-        <button
-          className='btn'
-          style={{ marginTop: '2rem' }}
-          onClick={resetList}
-        >
+        <button className="btn" style={{ marginTop: '2rem' }} onClick={resetList}>
           reset
         </button>
       ) : (
-        <button
-          className='btn'
-          style={{ marginTop: '2rem' }}
-          onClick={clearList}
-        >
+        <button className="btn" style={{ marginTop: '2rem' }} onClick={clearList}>
           clear
         </button>
       )}
@@ -2786,11 +2680,7 @@ import { useState } from 'react';
 const Counter = () => {
   const [count, setCount] = useState(0);
   return (
-    <button
-      className='btn'
-      onClick={() => setCount(count + 1)}
-      style={{ marginBottom: '1rem' }}
-    >
+    <button className="btn" onClick={() => setCount(count + 1)} style={{ marginBottom: '1rem' }}>
       count {count}
     </button>
   );
@@ -2822,21 +2712,21 @@ const Form = ({ addPerson }) => {
     setName('');
   };
   return (
-    <form className='form' onSubmit={handleSubmit}>
-      <div className='form-row'>
-        <label htmlFor='name' className='form-label'>
+    <form className="form" onSubmit={handleSubmit}>
+      <div className="form-row">
+        <label htmlFor="name" className="form-label">
           name
         </label>
         <input
-          type='text'
-          name='name'
-          id='name'
-          className='form-input'
+          type="text"
+          name="name"
+          id="name"
+          className="form-input"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
       </div>
-      <button className='btn btn-block' type='submit'>
+      <button className="btn btn-block" type="submit">
         submit
       </button>
     </form>
@@ -3002,7 +2892,7 @@ const LatestReact = () => {
       const newItems = Array.from({ length: 5000 }, (_, index) => {
         return (
           <div key={index}>
-            <img src='/vite.svg' alt='' />
+            <img src="/vite.svg" alt="" />
           </div>
         );
       });
@@ -3011,13 +2901,8 @@ const LatestReact = () => {
   };
   return (
     <section>
-      <form className='form'>
-        <input
-          type='text'
-          className='form-input'
-          value={text}
-          onChange={handleChange}
-        />
+      <form className="form">
+        <input type="text" className="form-input" value={text} onChange={handleChange} />
       </form>
       <h4>Items Below</h4>
       {isPending ? (
@@ -3028,8 +2913,7 @@ const LatestReact = () => {
             display: 'grid',
             gridTemplateColumns: '1fr 1fr 1fr',
             marginTop: '2rem',
-          }}
-        >
+          }}>
           {items}
         </div>
       )}
@@ -3074,7 +2958,7 @@ const LatestReact = () => {
       const newItems = Array.from({ length: 5000 }, (_, index) => {
         return (
           <div key={index}>
-            <img src='/vite.svg' alt='' />
+            <img src="/vite.svg" alt="" />
           </div>
         );
       });
@@ -3083,13 +2967,8 @@ const LatestReact = () => {
   };
   return (
     <section>
-      <form className='form'>
-        <input
-          type='text'
-          className='form-input'
-          value={text}
-          onChange={handleChange}
-        />
+      <form className="form">
+        <input type="text" className="form-input" value={text} onChange={handleChange} />
       </form>
       <h4>Items Below</h4>
       {isPending ? (
@@ -3100,12 +2979,11 @@ const LatestReact = () => {
             display: 'grid',
             gridTemplateColumns: '1fr 1fr 1fr',
             marginTop: '2rem',
-          }}
-        >
+          }}>
           {items}
         </div>
       )}
-      <button onClick={() => setShow(!show)} className='btn'>
+      <button onClick={() => setShow(!show)} className="btn">
         toggle
       </button>
       {show && (

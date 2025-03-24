@@ -4,10 +4,9 @@ const CleanupFunction = () => {
   useEffect(() => {
     console.log('in useEffect of Parent Component');
   }, []);
-  console.log('in Parent Component');
   return (
     <div>
-      <h1>Cleanup function</h1>
+      <h1>Event Listener</h1>
       <button className="btn" onClick={() => setToggle(!toggle)}>
         Toggle
       </button>
@@ -18,14 +17,17 @@ const CleanupFunction = () => {
 
 const RandomComponent = () => {
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      console.log('in useEffect of RandomComponent');
-    }, 1000);
-    return () => {
-      clearInterval(intervalId);
-      console.log('Cleanup');
+    const someFunc = () => {
+      console.log('hmm, this is interesting');
+      // some logic here
     };
+    window.addEventListener('scroll', someFunc);
+    return () => window.removeEventListener('scroll', someFunc);
   }, []);
-  return <h2>Hello There</h2>;
+  return (
+    <div>
+      <h2>Hello There</h2>
+    </div>
+  );
 };
 export default CleanupFunction;
