@@ -1,9 +1,9 @@
-// import Starter from './tutorial/03-conditional-rendering/starter/07-user-challenge';
-import Starter from './tutorial/02-useEffect/starter/05-1-event-listeners';
+import List from './tutorial/06-forms/starter/05-form-data';
 function App() {
   return (
     <div className="container">
-      <Starter />
+      <h2>Leverage Javascript</h2>
+      <List />
     </div>
   );
 }
