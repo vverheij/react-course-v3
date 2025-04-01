@@ -1,14 +1,10 @@
-import { useState } from 'react';
-import { shortList, list, longList } from './data';
-
+import Carousel from './Carousel';
+import SlickCarousel from './SlickCarousel';
 const App = () => {
-  const [carousel, setCarousel] = useState(shortList);
-  console.log(shortList);
-  console.log(carousel);
-
   return (
     <main>
-      <h2>Slider Starter</h2>
+      {/* <Carousel /> */}
+      <SlickCarousel />
     </main>
   );
 };
