@@ -1,5 +1,6 @@
 import Person from './Person';
-
+import { data } from '../../../../data';
+import { useState } from 'react';
 const List = ({ people }) => {
   return (
     <div>
