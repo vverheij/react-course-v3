@@ -5,7 +5,7 @@ const app = express();
 import morgan from 'morgan';
 
 let taskList = [
-  { id: nanoid(), title: 'walk the dog', isDone: false },
+  { id: nanoid(), title: 'walk the dog!', isDone: false },
   { id: nanoid(), title: 'wash dishes', isDone: false },
   { id: nanoid(), title: 'drink coffee', isDone: true },
   { id: nanoid(), title: 'take a nap', isDone: false },
@@ -60,7 +60,7 @@ app.delete('/api/tasks/:id', (req, res) => {
 
 app.use((req, res) => res.status(404).send('Route does not exist'));
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5001;
 
 const startApp = () => {
   try {
